@@ -1,0 +1,5 @@
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.MOdel\bin\Debug\ControladorDePedidos.Model.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.MOdel\bin\Debug\ControladorDePedidos.Model.pdb
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.MOdel.csprojResolveAssemblyReference.cache
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.pdb

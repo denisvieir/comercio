@@ -1,0 +1,12 @@
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\ControladorDePedidos.Repositorio.dll.config
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\ControladorDePedidos.Repositorio.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\ControladorDePedidos.Repositorio.pdb
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\ControladorDePedidos.Model.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\ControladorDePedidos.Model.pdb
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.dll
+C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.pdb
