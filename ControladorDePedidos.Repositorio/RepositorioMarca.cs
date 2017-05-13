@@ -38,6 +38,7 @@ namespace ControladorDePedidos.Repositorio
         {
             var original = contexto.Set<Marca>().Find(marca.Codigo);
             contexto.Set<Marca>().Remove(original);
+            contexto.SaveChanges();
         }
     }
 }

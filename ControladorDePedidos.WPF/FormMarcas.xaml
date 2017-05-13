@@ -38,7 +38,7 @@
             NormalImage="/dn32Layout;component/img/excluir.png" Margin="152,10,0,0" Height="62" 
             HorizontalAlignment="Left" Width="66" VerticalAlignment="Top"   ImageSize="32"
                                   FontSize="12"
-                                  Padding="3"/>
+                                  Padding="3" Click="btnExcluir_Click"/>
         <Controls:dn32ImageButton x:Name="btnAtualizar" 
             Style="{DynamicResource dn32ButtonStyle}"
             Text="Atualizar"
