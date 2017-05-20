@@ -13,13 +13,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Globalization;
 
 namespace ControladorDePedidos.WPF
 {
-    /// <summary>
-    /// Interaction logic for FormProdutos.xaml
-    /// </summary>
-    public partial class FormProdutos : Window
+   public partial class FormProdutos : Window
     {
         RepositorioProduto repositorioProduto;
         public FormProdutos()

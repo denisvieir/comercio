@@ -25,15 +25,28 @@ namespace ControladorDePedidos.WPF
             InitializeComponent();
         }
 
-        private void btnProduto_Click(object sender, RoutedEventArgs e)
+        private void btnProdutos_Click(object sender, RoutedEventArgs e)
         {
             var janelaProdutos = new FormProdutos();
             janelaProdutos.Show();
         }
 
+        private void btnUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            var janelaUsuarios = new FormUsuarios();
+            janelaUsuarios.Show();
+        }
+
         private void btnClientes_Click(object sender, RoutedEventArgs e)
         {
+            var janelaUsuarios = new FormClientes();
+            janelaUsuarios.Show();
+        }
 
+        private void btnCompras_Click(object sender, RoutedEventArgs e)
+        {
+            var janelaCompras = new FormCompras();
+            janelaCompras.Show();
         }
     }
 }

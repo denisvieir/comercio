@@ -6,12 +6,20 @@
         xmlns:local="clr-namespace:ControladorDePedidos.WPF"
         mc:Ignorable="d"
         Title="Produtos" Height="445.746" Width="800.769" WindowStartupLocation="CenterScreen"
-        xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout" 
+        xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout"
         Loaded="Window_Loaded"
+        xmlns:app="clr-namespace:ControladorDePedidos.WPF"
         >
+    
     <Window.Resources>
-        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <app:ConversorDeEstoque x:Key="ConversorDeEstoque"/>
+        </ResourceDictionary>
     </Window.Resources>
+    
     <Grid>
         <Controls:dn32ImageButton x:Name="btnNovo" 
                               Style="{DynamicResource dn32ButtonStyle}"
@@ -53,19 +61,24 @@
             FontSize="12"
             Padding="3"
             Click="btnMarcas_Click"/>
+
         <ListView x:Name="lstProdutos" SelectionMode="Single" ItemsSource="{Binding}" Margin="10,77,10,10">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Código" Width="50" DisplayMemberBinding="{Binding Codigo}"/>
-                    <GridViewColumn Header="Nome" Width="280" DisplayMemberBinding="{Binding Nome}"/>
-                    <GridViewColumn Header="Marca" Width="80" DisplayMemberBinding="{Binding Marca.Nome}"/>
-                    <GridViewColumn Header="Valor de Compra" Width="120" DisplayMemberBinding="{Binding ValorDeCompra}"/>
-                    <GridViewColumn Header="Valor de Venda" Width="120" DisplayMemberBinding="{Binding ValorDeVenda}"/>
-                    <GridViewColumn Header="Estoque" Width="80" DisplayMemberBinding="{Binding QuantidadeEmEstoque}"/>
-
+                    <GridViewColumn Header="Código" Width="60" DisplayMemberBinding="{Binding Codigo}"/>
+                    <GridViewColumn Header="Nome" Width="300" DisplayMemberBinding="{Binding Nome}"/>
+                    <GridViewColumn Header="Marca" Width="120" DisplayMemberBinding="{Binding Marca.Nome}"/>
+                    <GridViewColumn Header="Valor" Width="70" DisplayMemberBinding="{Binding ValorDeVenda}"/>
+                    <GridViewColumn Header="Valor de Compra" Width="110" DisplayMemberBinding="{Binding ValorDeCompra}"/>
+                    <GridViewColumn Header="Estoque" Width="70">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding QuantidadeEmEstoque}" Foreground="{Binding Path=., Converter={StaticResource ConversorDeEstoque}}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
     </Grid>
-    
 </Window>

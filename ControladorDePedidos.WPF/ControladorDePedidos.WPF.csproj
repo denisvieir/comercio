@@ -68,11 +68,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FormBuscaDeProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FormCadastroDeMarca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FormCadastroDeProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCadastroDeUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCompras.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,6 +108,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FormUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuPrincipal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,17 +120,40 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Conversores\ConversorDeData.cs" />
+    <Compile Include="Conversores\ConversorDeEstoque.cs" />
+    <Compile Include="FormBuscaDeProduto.xaml.cs">
+      <DependentUpon>FormBuscaDeProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeCliente.xaml.cs">
+      <DependentUpon>FormCadastroDeCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroDeMarca.xaml.cs">
       <DependentUpon>FormCadastroDeMarca.xaml</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroDeProduto.xaml.cs">
       <DependentUpon>FormCadastroDeProduto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastroDeCompra.xaml.cs">
+      <DependentUpon>FormCadastroDeCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeUsuario.xaml.cs">
+      <DependentUpon>FormCadastroDeUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes.xaml.cs">
+      <DependentUpon>FormClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompras.xaml.cs">
+      <DependentUpon>FormCompras.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FormMarcas.xaml.cs">
       <DependentUpon>FormMarcas.xaml</DependentUpon>
     </Compile>
     <Compile Include="FormProdutos.xaml.cs">
       <DependentUpon>FormProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuarios.xaml.cs">
+      <DependentUpon>FormUsuarios.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
@@ -153,6 +204,9 @@
       <Project>{21638e78-ea76-4938-b1d8-c556828d667a}</Project>
       <Name>ControladorDePedidos.Repositorio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\adicionar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

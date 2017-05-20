@@ -31,6 +31,7 @@ namespace ControladorDePedidos.Repositorio
 
             var original = contexto.Set<Produto>().Find(produto.Codigo);
             contexto.Entry(original).CurrentValues.SetValues(produto);
+
             original.Marca = marcaOriginal;
 
             contexto.SaveChanges();
@@ -38,7 +39,9 @@ namespace ControladorDePedidos.Repositorio
 
         public List<Produto> Liste()
         {
-            return contexto.Set<Produto>().ToList();
+            contexto = new Contexto();
+            var lista = contexto.Set<Produto>().ToList();
+            return lista;
         }
 
         public void Excluir(Produto produto)
@@ -46,6 +49,26 @@ namespace ControladorDePedidos.Repositorio
             var original = contexto.Set<Produto>().Find(produto.Codigo);
             contexto.Set<Produto>().Remove(original);
             contexto.SaveChanges();
+        }
+
+        public List<Produto> Buscar(string termoDaBusca)
+        {
+            contexto = new Contexto();
+            var lista = contexto.Set<Produto>().Where(x => x.Nome.Contains(termoDaBusca)).ToList();
+            return lista;
+        }
+
+        public Produto Buscar(int codigo)
+        {
+            contexto = new Contexto();
+            return contexto.Set<Produto>().FirstOrDefault(x => x.Codigo == codigo);
+        }
+
+        public List<Produto> ObtenhaProdutosComEstoqueBaixo()
+        {
+            contexto = new Contexto();
+            var lista = contexto.Set<Produto>().Where(x => x.QuantidadeEmEstoque < x.QuantidadeDesejavelEmEstoque).ToList();
+            return lista;
         }
     }
 }
