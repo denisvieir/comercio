@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\App.xaml
-12-499396536
+14-1874098117
 
-18900169710
+20724411546
 19-363014918
-FormBuscaDeProduto.xaml;FormCadastroDeCliente.xaml;FormCadastroDeMarca.xaml;FormCadastroDeProduto.xaml;FormCadastroDeCompra.xaml;FormCadastroDeUsuario.xaml;FormClientes.xaml;FormCompras.xaml;FormMarcas.xaml;FormProdutos.xaml;FormUsuarios.xaml;MenuPrincipal.xaml;
+FormBuscaDeProduto.xaml;FormCadastroDeCliente.xaml;FormCadastroDeMarca.xaml;FormCadastroDeProduto.xaml;FormCadastroDeCompra.xaml;FormCadastroDeUsuario.xaml;FormCadastroDeVenda.xaml;FormClientes.xaml;FormCompras.xaml;FormMarcas.xaml;FormProdutos.xaml;FormUsuarios.xaml;FormVendas.xaml;MenuPrincipal.xaml;
 
 False
 

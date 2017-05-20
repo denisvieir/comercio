@@ -75,3 +75,7 @@ C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormBu
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormBuscaDeProduto.baml
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormCadastroDeCompra.baml
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormCompras.baml
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormCadastroDeVenda.g.cs
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormVendas.g.cs
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormCadastroDeVenda.baml
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.WPF\obj\Debug\FormVendas.baml

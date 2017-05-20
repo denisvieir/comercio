@@ -59,9 +59,11 @@
     <Compile Include="RepositorioCliente.cs" />
     <Compile Include="RepositorioCompra.cs" />
     <Compile Include="RepositorioItemDaCompra.cs" />
+    <Compile Include="RepositorioItemDaVenda.cs" />
     <Compile Include="RepositorioUsuario.cs" />
     <Compile Include="RepositorioProduto.cs" />
     <Compile Include="RepositorioMarca.cs" />
+    <Compile Include="RepositorioVenda.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControladorDePedidos.MOdel\ControladorDePedidos.Model.csproj">
