@@ -7,16 +7,10 @@ using System.Threading.Tasks;
 
 namespace ControladorDePedidos.Repositorio
 {
-    public class RepositorioItemDaCompra
+    public class RepositorioItemDaCompra : RepositorioGenerico<ItemDaCompra>
     {
-        Contexto contexto;
-
-        public RepositorioItemDaCompra()
-        {
-            contexto = new Contexto();
-        }
-
-        public void Adicione(ItemDaCompra itemDaCompra)
+       
+        public override void Adicione(ItemDaCompra itemDaCompra)
         {
             var compraOriginal = contexto.Set<Compra>().Find(itemDaCompra.Compra.Codigo);
             itemDaCompra.Compra = compraOriginal;
@@ -28,30 +22,11 @@ namespace ControladorDePedidos.Repositorio
             contexto.SaveChanges();
         }
 
-        public void Atualize(ItemDaCompra itemDaCompra)
-        {
-            var original = contexto.Set<ItemDaCompra>().Find(itemDaCompra.Codigo);
-            contexto.Entry(original).CurrentValues.SetValues(itemDaCompra);
-            contexto.SaveChanges();
-        }
-
-        public List<ItemDaCompra> Liste()
-        {
-            contexto = new Contexto();
-            return contexto.Set<ItemDaCompra>().ToList();
-        }
-
         public List<ItemDaCompra> Liste(int CodigoDaCompra)
         {
             contexto = new Contexto();
             return contexto.Set<ItemDaCompra>().Where(x => x.Compra.Codigo == CodigoDaCompra).ToList();
         }
 
-        public void Excluir(ItemDaCompra itemDaCompra)
-        {
-            var original = contexto.Set<ItemDaCompra>().Find(itemDaCompra.Codigo);
-            contexto.Set<ItemDaCompra>().Remove(original);
-            contexto.SaveChanges();
-        }
     }
 }

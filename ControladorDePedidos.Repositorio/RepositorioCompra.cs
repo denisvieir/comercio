@@ -7,39 +7,8 @@ using System.Threading.Tasks;
 
 namespace ControladorDePedidos.Repositorio
 {
-    public class RepositorioCompra
+    public class RepositorioCompra : RepositorioGenerico<Compra>
     {
-        Contexto contexto;
-
-        public RepositorioCompra()
-        {
-            contexto = new Contexto();
-        }
-
-        public void Adicione(Compra compra)
-        {
-            contexto.Set<Compra>().Add(compra);
-            contexto.SaveChanges();
-        }
-
-        public void Atualize(Compra compra)
-        {
-            var original = contexto.Set<Compra>().Find(compra.Codigo);
-            contexto.Entry(original).CurrentValues.SetValues(compra);
-            contexto.SaveChanges();
-        }
-
-        public List<Compra> Liste()
-        {
-            contexto = new Contexto();
-            return contexto.Set<Compra>().ToList();
-        }
-
-        public void Excluir(Compra compra)
-        {
-            var original = contexto.Set<Compra>().Find(compra.Codigo);
-            contexto.Set<Compra>().Remove(original);
-            contexto.SaveChanges();
-        }
+        
     }
 }

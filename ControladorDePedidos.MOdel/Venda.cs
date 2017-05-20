@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace ControladorDePedidos.Model
 {
-    public class Venda
+    public class Venda : ClasseBase
     {
-        [Key]
-        public int Codigo { get; set; }
         public DateTime DataDeCadastro { get; set; }
         public DateTime DataDaEfetivacao { get; set; }
         public virtual List<ItemDaVenda> ItensDaVenda { get; set; }
