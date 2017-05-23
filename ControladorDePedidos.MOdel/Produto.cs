@@ -22,6 +22,8 @@ namespace ControladorDePedidos.Model
         public int QuantidadeMinimaEmEstoque { get; set; }
 
         public int QuantidadeDesejavelEmEstoque { get; set; }
+
+        public Fornecedor Fornecedor { get; set; }
     }
 
 }

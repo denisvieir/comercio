@@ -46,6 +46,7 @@
     <Compile Include="Compra.cs" />
     <Compile Include="eStatusDaCompra.cs" />
     <Compile Include="eStatusDaVenda.cs" />
+    <Compile Include="Fornecedor.cs" />
     <Compile Include="ItemDaCompra.cs" />
     <Compile Include="ItemDaVenda.cs" />
     <Compile Include="Marca.cs" />
