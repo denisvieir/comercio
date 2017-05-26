@@ -5,6 +5,6 @@ C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePed
 C:\Users\MrRobot\documents\visual studio 2015\Projects\Comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.pdb
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.MOdel\bin\Debug\ControladorDePedidos.Model.dll
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.MOdel\bin\Debug\ControladorDePedidos.Model.pdb
-C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.csprojResolveAssemblyReference.cache
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.dll
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.pdb
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.MOdel\obj\Debug\ControladorDePedidos.Model.csprojResolveAssemblyReference.cache

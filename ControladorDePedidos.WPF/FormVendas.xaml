@@ -58,6 +58,7 @@
         <ListView x:Name="lstVendas" SelectionMode="Single" ItemsSource="{Binding}" Margin="10,77,10,10">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Cliente" Width="200" DisplayMemberBinding="{Binding Cliente.Nome}"/>
                     <GridViewColumn Header="Valor total" Width="100" DisplayMemberBinding="{Binding ValorTotal, StringFormat='{}{0:C}'}"/>
                     <GridViewColumn Header="Quantidade de produtos" Width="140" DisplayMemberBinding="{Binding QuantidadeDeProdutos}"/>
                     <GridViewColumn Header="Data do cadastro" Width="110" DisplayMemberBinding="{Binding Path=DataDeCadastro, Converter={StaticResource ConversorDeData}}"/>

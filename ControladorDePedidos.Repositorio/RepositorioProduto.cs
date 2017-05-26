@@ -1,27 +1,37 @@
 ﻿using ControladorDePedidos.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControladorDePedidos.Repositorio
 {
     public class RepositorioProduto : RepositorioGenerico<Produto>
     {
 
-        public void Atualize(Produto produto)
+        public override void Adicione(Produto item)
+        {
+            var marcaOriginal = contexto.Set<Marca>().Find(item.Marca.Codigo);
+            var fornecedor = contexto.Set<Fornecedor>().Find(item.Fornecedor.Codigo);
+
+            item.Marca = marcaOriginal;
+            item.Fornecedor = fornecedor;
+
+            base.Adicione(item);
+        }
+
+        public override void Atualize(Produto produto)
         {
             var marcaOriginal = contexto.Set<Marca>().Find(produto.Marca.Codigo);
+            var fornecedorOriginal = contexto.Set<Fornecedor>().Find(produto.Fornecedor.Codigo);
 
             var original = contexto.Set<Produto>().Find(produto.Codigo);
             contexto.Entry(original).CurrentValues.SetValues(produto);
 
             original.Marca = marcaOriginal;
+            original.Fornecedor = fornecedorOriginal;
 
             contexto.SaveChanges();
         }
-       
+
         public List<Produto> Buscar(string termoDaBusca)
         {
             contexto = new Contexto();

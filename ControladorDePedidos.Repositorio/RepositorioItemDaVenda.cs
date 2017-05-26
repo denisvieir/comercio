@@ -1,9 +1,6 @@
 ﻿using ControladorDePedidos.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControladorDePedidos.Repositorio
 {
@@ -16,7 +13,7 @@ namespace ControladorDePedidos.Repositorio
 
             var produtoOriginal = contexto.Set<Produto>().Find(itemDaVenda.Produto.Codigo);
             itemDaVenda.Produto = produtoOriginal;
-
+            
             contexto.Set<ItemDaVenda>().Add(itemDaVenda);
             contexto.SaveChanges();
         }

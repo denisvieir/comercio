@@ -2,6 +2,7 @@
 using ControladorDePedidos.Repositorio;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 
 namespace ControladorDePedidos.WPF
@@ -99,15 +100,23 @@ namespace ControladorDePedidos.WPF
 
             var itensDaCompra = ObtenhaListaDeItensDaCompra(compra);
 
+            var listaAgrupada = itensDaCompra.GroupBy(x => x.Produto.Fornecedor).ToList();
+
             string listaString = "";
 
-            foreach (var item in itensDaCompra)
+            foreach (var item in listaAgrupada)
             {
-                listaString += $"{item.Quantidade} - {item.Produto.Nome} {item.Produto.Marca.Nome} \n";
+                var fornecedor = item.Key;
+                var itens = item.ToList();
+
+                foreach (var itemDaCompra in itens)
+                {
+                    listaString += $"{itemDaCompra.Quantidade} - {itemDaCompra.Produto.Nome} {itemDaCompra.Produto.Marca.Nome} \n";
+                }
+                Utilitarios.EnviarEmail("denisvieira07@gmail.com", "Solicitação de Compra", listaString);
             }
 
             // 2 Enviar e-mail ao fornecedor col a lista de compra
-            Utilitarios.EnviarEmail("denisvieira07@gmail.com", "Finalização de compra", "Mensagem de teste");
             // Todo Enviar e-mail
 
             // 3 Atualizar o banco de dados informando que a compra foi realizada

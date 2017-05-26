@@ -1,9 +1,8 @@
 ﻿using ControladorDePedidos.Model;
-using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 
 namespace ControladorDePedidos.Repositorio
 {
@@ -34,11 +33,16 @@ namespace ControladorDePedidos.Repositorio
             return contexto.Set<T>().ToList();
         }
 
-        public void Excluir(T item)
+        public virtual void Excluir(T item)
         {
-            var original = contexto.Set<T>().Find(item.Codigo);
-            contexto.Set<T>().Remove(original);
-            contexto.SaveChanges();
+            try {
+                var original = contexto.Set<T>().Find(item.Codigo);
+                contexto.Set<T>().Remove(original);
+                contexto.SaveChanges();
+            }catch(DbUpdateException e)
+            {
+                MessageBox.Show("Não é possível excluir itens associados");
+            }
         }
 
     }

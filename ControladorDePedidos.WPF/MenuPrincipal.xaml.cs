@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ControladorDePedidos.Model;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ControladorDePedidos.WPF
 {
@@ -20,33 +8,72 @@ namespace ControladorDePedidos.WPF
     /// </summary>
     public partial class MenuPrincipal : Window
     {
-        public MenuPrincipal()
+        public Usuario Usuario { get; set; }
+        public MenuPrincipal(Usuario usuario)
         {
+            this.Usuario = usuario;
             InitializeComponent();
         }
 
         private void btnProdutos_Click(object sender, RoutedEventArgs e)
         {
+            if(!Usuario.Administrador && !Usuario.Produtos)
+            {
+                MessageBox.Show("Acesso Negado");
+                return;
+            }
+
             var janelaProdutos = new FormProdutos();
             janelaProdutos.Show();
         }
 
         private void btnUsuarios_Click(object sender, RoutedEventArgs e)
         {
+
+            if (!Usuario.Administrador)
+            {
+                MessageBox.Show("Acesso Negado");
+                return;
+            }
+
             var janelaUsuarios = new FormUsuarios();
             janelaUsuarios.Show();
         }
 
         private void btnClientes_Click(object sender, RoutedEventArgs e)
         {
+            if (!Usuario.Administrador && !Usuario.Clientes)
+            {
+                MessageBox.Show("Acesso Negado");
+                return;
+            }
+
             var janelaUsuarios = new FormClientes();
             janelaUsuarios.Show();
         }
 
         private void btnCompras_Click(object sender, RoutedEventArgs e)
         {
+
+            if (!Usuario.Administrador && !Usuario.Compras)
+            {
+                MessageBox.Show("Acesso Negado");
+                return;
+            }
+
             var janelaCompras = new FormCompras();
             janelaCompras.Show();
+        }
+
+        private void btnVendas_Click(object sender, RoutedEventArgs e)
+        {
+            if(!Usuario.Administrador && !Usuario.Vendas)
+            {
+                MessageBox.Show("Acesso Negado");
+                return;
+            }
+            var janelaVendas = new FormVendas();
+            janelaVendas.Show();
         }
     }
 }

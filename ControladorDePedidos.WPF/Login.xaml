@@ -1,0 +1,24 @@
+﻿<Window x:Class="ControladorDePedidos.WPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="Autenticação" Height="178.604" Width="476.618"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded"
+        >
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="102,25,0,0" TextWrapping="Wrap" Text="Usuario:" VerticalAlignment="Top" Width="49"/>
+        <PasswordBox  x:Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="156,60,0,0"  VerticalAlignment="Top" Width="176"/>
+        <TextBlock TextAlignment="Right" x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top" Width="141"/>
+        <ComboBox x:Name="cmbUsuario" HorizontalAlignment="Left" Margin="156,25,0,0" VerticalAlignment="Top" Width="175" ItemsSource="{Binding}" SelectedValuePath="Codigo" DisplayMemberPath="Nome"/>
+        <Button x:Name="button" Click="button_Click" Content="Entrar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="335,96,0,0" Height="35"/>
+    </Grid>
+</Window>

@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControladorDePedidos.Model
 {
@@ -14,6 +10,7 @@ namespace ControladorDePedidos.Model
         public DateTime DataDaEfetivacao { get; set; }
         public virtual List<ItemDaVenda> ItensDaVenda { get; set; }
         public eStatusDaVenda Status { get; set; }
+        public virtual Cliente Cliente { get; set; }
         [NotMapped]
         public decimal ValorTotal
         {

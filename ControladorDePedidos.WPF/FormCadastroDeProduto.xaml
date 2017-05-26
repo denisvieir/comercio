@@ -15,9 +15,7 @@
         <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <TextBox Text="{Binding Codigo}" x:Name="txtCodigo" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="156,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176" Grid.ColumnSpan="2"/>
         <TextBox Text="{Binding Nome}" x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="156,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Grid.ColumnSpan="2"/>
-        <TextBlock TextAlignment="Right" x:Name="textBlock" HorizontalAlignment="Left" Margin="102,17,0,0" TextWrapping="Wrap" Text="Código:" VerticalAlignment="Top" Width="49"/>
         <TextBlock TextAlignment="Right" x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="102,45,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" Width="49"/>
         <Controls:dn32ImageButton x:Name="btnSalvar" 
                               Style="{DynamicResource dn32ButtonStyle}"

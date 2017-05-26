@@ -38,6 +38,7 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -53,6 +54,14 @@
     <Compile Include="Migrations\201705200243435_cadastro-de-compra.cs" />
     <Compile Include="Migrations\201705200243435_cadastro-de-compra.Designer.cs">
       <DependentUpon>201705200243435_cadastro-de-compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705240241158_senha.cs" />
+    <Compile Include="Migrations\201705240241158_senha.Designer.cs">
+      <DependentUpon>201705240241158_senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705260003154_cliente.cs" />
+    <Compile Include="Migrations\201705260003154_cliente.Designer.cs">
+      <DependentUpon>201705260003154_cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +89,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705200243435_cadastro-de-compra.resx">
       <DependentUpon>201705200243435_cadastro-de-compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705240241158_senha.resx">
+      <DependentUpon>201705240241158_senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705260003154_cliente.resx">
+      <DependentUpon>201705260003154_cliente.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -24,3 +24,5 @@ C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.Repositorio\obj\Debu
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.pdb
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.Migrations.cadastrodecompra.resources
 C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.csproj.GenerateResource.Cache
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.Migrations.senha.resources
+C:\Users\MrRobot\Source\Repos\comercio\ControladorDePedidos.Repositorio\obj\Debug\ControladorDePedidos.Repositorio.Migrations.cliente.resources
